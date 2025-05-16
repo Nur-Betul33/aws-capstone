@@ -293,12 +293,12 @@ select NAT Instance `ami-0aa210fd2121a98b7`
 - Click on `Launch Instance`
 
 ```text
-aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t2.micro --key-name XXX --security-group-ids sg-XXX --subnet-id subnet-XXX --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=ondia-capstone-nat-instance-dont-terminate}]'
+aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t2.micro --key-name XXX --security-group-ids sg-XXX --subnet-id subnet-XXX --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=ondia-capstone-nat-instance-dont-terminate}]' --disable-api-termination
 ```
 
 - for example
 ```text
-aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t2.micro --key-name paulosx --security-group-ids sg-00650fe11e8b34b3c --subnet-id subnet-073f00d730228a6ba --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=ondia-capstone-nat-instance-dont-terminate}]'
+aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t2.micro --key-name nur --security-group-ids sg-0ac2e2bf36a26e2a2 --subnet-id subnet-08f4978a1b8761be8 --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=ondia-capstone-nat-instance-dont-terminate}]' --disable-api-termination
 ```
 
 - !!!!!! Warning!!!!!!select NAT instance and `enable stop` source/destination check
